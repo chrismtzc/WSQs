@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+float F (float n)
+{
+	float x;
+	float R=0.0, Rf=0.0;
+	float Factorial= 1;
+	for(x=1; x<=n; x++)
+	{
+		Factorial = Factorial * x;
+		R = R + 1/Factorial;
+	}
+	Rf = R + 1;
+	return Rf;
+}
+
+int main ()
+{
+	float n;
+		cout<<"Este programa te da el valor de e"<<endl;
+		cout<<"Dame un numero"<<endl;
+		cin>>n;
+	    float Factorial = F(n);
+		cout<<"La constante e vale:  "<< Factorial <<endl;
+	return 0;
+}
